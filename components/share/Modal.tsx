@@ -11,7 +11,7 @@ const Modal: React.FC<{
       className={`z-30 fixed inset-0 p-4 flex justify-center items-center transition-colors ${overlayClass}`}
       onClick={onClose}>
       <div
-        className={`bg-white dark:bg-blackblue rounded-2xl shadow p-5 transition-all max-w-md sm:w-full w-full ${modalClass}`}
+        className={`bg-blue-500 dark:bg-fondDark rounded-2xl shadow p-5 transition-all max-w-md sm:w-full w-full ${modalClass}`}
         onClick={(e) => e.stopPropagation()}>
         <button
           className="absolute top-2 right-2  text-[#EE4E4E]  hover:text-red-700"

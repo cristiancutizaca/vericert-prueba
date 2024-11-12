@@ -21,10 +21,6 @@ module.exports = {
         'roboto': ['Roboto', 'system-ui'],
       },
       colors: {
-        lightBackground: 'linear-gradient(to right, #003D4D, #004B8D)',        
-        'darkBackground': '#140d2f',
-        'lightText': '#000000',
-        'darkText': '#ffffff',
         'primary': '#0e7ac2',
         'secondary': '#ff00d4',
         'blackblue': '#1e293b',
