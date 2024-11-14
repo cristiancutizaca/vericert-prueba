@@ -3,7 +3,7 @@ import ClientLayout from './clientLayout';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'ECOMÁS - Consultoría y capacitación',
+  title: 'VERICERTS',
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

@@ -1,4 +1,3 @@
-"use client";
 import React from "react";
 import Image from "next/image";
 import { BsCheckCircle } from "react-icons/bs";
@@ -10,54 +9,74 @@ const ExpertiseSection = () => {
     <section className="flex flex-col md:flex-row items-center bg-transparent p-10 md:p-20 max-w-screen-xl mx-auto gap-10">
       {/* Contenedor de las imágenes */}
       <div className="md:w-1/2 flex flex-col items-center gap-4 relative">
-        {/* Imagen principal */}
+        {/* Imagen principal (siempre visible) */}
         <div className="relative z-10">
           <Image
-            src="/image/estambient.jpg" // Asegúrate de que esta ruta sea válida en tu proyecto
+            src="/image/estambient.jpg"
             alt="Mechanic working on car"
             width={400}
             height={300}
-            className="rounded-lg shadow-lg ml-40"
-          />
-        </div>
-        {/* Imagen secundaria detrás */}
-        <div className="absolute top-10 left-10 -z-1">
-          <Image
-            src="/image/goteo.jpg" // Asegúrate de que esta ruta sea válida en tu proyecto
-            alt="Secondary mechanic image"
-            width={350}
-            height={250}
-            className="rounded-lg shadow-md opacity-80 mt-40 ml-10"
+            className="rounded-lg shadow-lg lg:ml-40 md:ml-44"
           />
         </div>
 
-        {/* Imagen secundaria detrás */}
-        <div className="absolute top-60 left-6 -z-0">
+        {/* Imagen secundaria detrás (solo visible en pantallas md o mayores) */}
+        <div className="hidden md:block absolute top-10 left-10 z-1">
           <Image
-            src="/image/fondcian.jpg" // Asegúrate de que esta ruta sea válida en tu proyecto
+            src="/image/goteo.jpg"
             alt="Secondary mechanic image"
             width={350}
             height={250}
-            className="rounded-lg shadow-md opacity-50 mt-20"
+            className="rounded-lg shadow-md opacity-80 lg:mt-40 lg:ml-5 md:mt-40 md:ml-10"
           />
         </div>
 
-        <div className="relative bottom-80 z-1 ">
+        {/* Otra imagen detrás (solo visible en pantallas md o mayores) */}
+        <div className="hidden md:block absolute top-60 left-12 -z-10">
           <Image
-            src="/image/fondcian.jpg" // Asegúrate de que esta ruta sea válida en tu proyecto
+            src="/image/fondcian.jpg"
+            alt="Secondary mechanic image"
+            width={350}
+            height={250}
+            className="rounded-lg shadow-md opacity-50 mt-[40px] ml-[35px]"
+          />
+        </div>
+
+        {/* Imagen adicional detrás (solo visible en pantallas md o mayores) */}
+        <div className="hidden md:block relative bottom-80 left-16 z-1">
+          <Image
+            src="/image/fondcian.jpg"
             alt="Mechanic working on car"
             width={400}
             height={300}
-            className="rounded-lg shadow-lg opacity-50 ml- "
+            className="rounded-lg shadow-lg opacity-50"
           />
+        </div>
+
+        {/* Elemento hexagonal */}
+        <div
+          className="hidden lg:flex absolute text-white p-4 flex-col items-center justify-center mt-20 ml-[900px]"
+          style={{
+            clipPath:
+              "polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)",
+            width: "120px",
+            height: "104px",
+            backgroundColor: "black",
+            top: "150px", // Ajusta estos valores para mover el hexágono
+            left: "20px", // Ajusta estos valores para mover el hexágono
+          }}
+        >
+          <FaTools className="w-10 h-10" />
+          <span className="text-2xl font-bold">25+</span>
+          <span className="text-sm">Years of experience</span>
         </div>
       </div>
+      {/* Elemento hexagonal */}
 
       {/* Contenedor de texto e información */}
-      <div className="md:w-1/2 text-gray-700 dark:text-white">
-        <span className="text-red-500 uppercase font-semibold">
-          Know About Us
-        </span>
+
+      <div className="md:w-1/2 text-gray-700 dark:text-white  -z-20">
+        <span className="text-red-500 uppercase font-semibold "></span>
         <h2 className="text-4xl font-extrabold my-4">
           Ventajas de Usar Vericerts
         </h2>
@@ -97,20 +116,6 @@ const ExpertiseSection = () => {
           </li>
         </ul>
 
-        <div className="mt-6 flex items-center space-x-4">
-          <div className="bg-black text-white p-4 rounded-lg flex flex-col items-center justify-center">
-            <FaTools className="w-10 h-10" />
-            <span className="text-2xl font-bold">25+</span>
-            <span className="text-sm">Years of experience</span>
-          </div>
-
-          {/* Botón con redirección usando legacyBehavior */}
-          <Link href="/more-info" legacyBehavior>
-            <a className="bg-red-500 hover:bg-red-600 text-white py-2 px-6 rounded-full font-semibold shadow-md transition duration-300">
-              Read More
-            </a>
-          </Link>
-        </div>
       </div>
     </section>
   );

@@ -124,57 +124,50 @@ function Navbar() {
                     <FaUserCog className="md:text-xl text-4xl" />
                   </Link>
                 </li>
+                <div className="flex justify-end pr-4">
+                  <ThemeSwitcher />
+                </div>
               </ul>
             </div>
           </div>
           <div className={`md:hidden ${navbar ? "block" : "hidden"}`}>
-            <ul>
-              {/* Links del menú móvil */}
-              {/* Otros elementos del menú */}
-              <li className="font-extralight text-xl text-black dark:text-gray-100 lg:mb-0 md:mb-0 mb-6 py-1 px-6 text-center border border-transparent hover:border-testCian hover:bg-white/15 rounded transition-transform transform hover:scale-125">
-                <Link href="/" onClick={() => setNavbar(!navbar)}>
-                  Inicio
-                </Link>
-              </li>
-              <li className="font-extralight text-xl text-black dark:text-gray-100 lg:mb-0 md:mb-0 mb-6 py-1 px-6 text-center border border-transparent hover:border-testCian hover:bg-white/15 rounded transition-transform transform hover:scale-125">
-                <Link href="/certs" onClick={() => setNavbar(!navbar)}>
-                  Servicios
-                </Link>
-              </li>
-              <li className="font-extralight text-xl text-black dark:text-gray-100 lg:mb-0 md:mb-0 mb-6 py-1 px-6 text-center border border-transparent hover:border-testCian hover:bg-white/15 rounded transition-transform transform hover:scale-125">
-                <Link href="/graduate" onClick={() => setNavbar(!navbar)}>
-                  Nosotros
-                </Link>
-              </li>
-              <li className="font-extralight text-xl text-black dark:text-gray-100 lg:mb-0 md:mb-0 mb-6 py-1 px-6 text-center border border-transparent hover:border-testCian hover:bg-white/15 rounded transition-transform transform hover:scale-125">
-                <Link href="/about" onClick={() => setNavbar(!navbar)}>
-                  Instituciones
-                </Link>
-              </li>
-              <li className="font-extralight text-xl text-black dark:text-gray-100 lg:mb-0 md:mb-0 mb-6 py-1 px-6 text-center border border-transparent hover:border-testCian hover:bg-white/15 rounded transition-transform transform hover:scale-125">
-                <Link href="/" onClick={() => setNavbar(!navbar)}>
-                  certificados
-                </Link>
-              </li>
-              <li className="font-extralight text-xl text-black dark:text-gray-100 lg:mb-0 md:mb-0 mb-6 py-1 px-6 text-center border border-transparent hover:border-testCian hover:bg-white/15 rounded transition-transform transform hover:scale-125">
-                <Link href="/" onClick={() => setNavbar(!navbar)}>
-                  Contactanos
-                </Link>
-              </li>
-              <li className="lg:pl-40 flex justify-center items-center hover:text-primaryBlue md:mt-0 mt-20">
-                <Link
-                  href="/login"
-                  className="bg-secondaryCian py-1 px-4 rounded-xl text-white hover:bg-gray-100 hover:text-primaryBlue hover:scale-125 duration-300"
-                >
-                  <FaUserCog className="md:text-xl text-4xl" />
-                </Link>
-              </li>
-            </ul>
-          </div>
+  <ul>
+    {/* Mobile menu links */}
+    <li className="font-extralight text-xl text-black dark:text-gray-100 mb-6 py-1 px-6 text-center border border-transparent hover:border-testCian hover:bg-white/15 rounded transition-transform transform hover:scale-125">
+      <Link href="/" onClick={() => setNavbar(!navbar)}>Inicio</Link>
+    </li>
+    <li className="font-extralight text-xl text-black dark:text-gray-100 mb-6 py-1 px-6 text-center border border-transparent hover:border-testCian hover:bg-white/15 rounded transition-transform transform hover:scale-125">
+      <Link href="/certs" onClick={() => setNavbar(!navbar)}>Servicios</Link>
+    </li>
+    <li className="font-extralight text-xl text-black dark:text-gray-100 mb-6 py-1 px-6 text-center border border-transparent hover:border-testCian hover:bg-white/15 rounded transition-transform transform hover:scale-125">
+      <Link href="/graduate" onClick={() => setNavbar(!navbar)}>Nosotros</Link>
+    </li>
+    <li className="font-extralight text-xl text-black dark:text-gray-100 mb-6 py-1 px-6 text-center border border-transparent hover:border-testCian hover:bg-white/15 rounded transition-transform transform hover:scale-125">
+      <Link href="/about" onClick={() => setNavbar(!navbar)}>Instituciones</Link>
+    </li>
+    <li className="font-extralight text-xl text-black dark:text-gray-100 mb-6 py-1 px-6 text-center border border-transparent hover:border-testCian hover:bg-white/15 rounded transition-transform transform hover:scale-125">
+      <Link href="/" onClick={() => setNavbar(!navbar)}>certificados</Link>
+    </li>
+    <li className="font-extralight text-xl text-black dark:text-gray-100 mb-6 py-1 px-6 text-center border border-transparent hover:border-testCian hover:bg-white/15 rounded transition-transform transform hover:scale-125">
+      <Link href="/" onClick={() => setNavbar(!navbar)}>Contactanos</Link>
+    </li>
+    <li className="flex justify-center items-center hover:text-primaryBlue mt-20">
+      <Link
+        href="/login"
+        className="bg-secondaryCian py-1 px-4 rounded-xl text-white hover:bg-gray-100 hover:text-primaryBlue hover:scale-125 duration-300"
+      >
+        <FaUserCog className="text-4xl" />
+      </Link>
+    </li>
+
+    {/* Centered ThemeSwitcher */}
+    <div className="flex justify-center mt-4">
+      <ThemeSwitcher />
+    </div>
+  </ul>
+</div>
+
           {/* Agregar el ThemeSwitcher al final de la barra de navegación */}
-          <div className="flex justify-end pr-4">
-            <ThemeSwitcher />
-          </div>
         </div>
       </nav>
     </div>

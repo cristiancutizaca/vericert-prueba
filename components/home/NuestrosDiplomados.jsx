@@ -55,11 +55,11 @@ const NuestrosDiplomados = () => {
 
         {/* Contenedor de imagen con botón de reproducción */}
         <div className="md:w-1/2 flex justify-center items-center mt-8 md:mt-0 relative">
-          <div className="relative w-[500px] max-w-md rounded-lg overflow-hidden shadow-lg">
+          <div className="relative lg:w-[500px] lg:max-w-md rounded-lg overflow-hidden shadow-lg md:lg:w-[300px]">
             <img
               src="/image/vericert1.webp" // Reemplaza esta ruta con la imagen que desees
               alt="Tech Solution Image "
-              className="w-[500px] h-[500px] object-cover"
+              className="w-[500px] h-[500px] object-cover "
             />
            
           </div>
