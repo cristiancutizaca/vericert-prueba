@@ -19,7 +19,7 @@ const PrincipalHome = () => {
 
   return (
     // Ajuste de padding-top para dejar espacio debajo del Navbar
-    <section className="relative flex justify-center items-center pt-20 md:pt-32 lg:pt-40 pl-8 bg-fixed bg-gradient-to-r  dark:from-cyan-950 dark:to-blue-900">
+    <section className="relative flex justify-center items-center pt-20 md:pt-32 lg:pt-40 pl-8 bg-fixed bg-gradient-to-r  dark:from-fondDark dark:to-fondDark">
       <div className="absolute w-96 h-96 blur-2xl -z-10 bg-gradient-radial dark:from-cyan-950 from-blue-200 to-transparent right-[11%] top-0 hidden md:block"></div>
       <div className="absolute w-96 h-96 blur-2xl -z-10 bg-gradient-radial dark:from-sky-950 from-violet-200 right-96 top-10 "></div>
       <div className="absolute w-96 h-96 blur-2xl -z-10 bg-gradient-radial dark:from-cyan-950 from-blue-100 to-transparent left-[10%] top-[10%] hidden md:block"></div>
@@ -68,7 +68,7 @@ const PrincipalHome = () => {
               wrapper="span"
               cursor={true}
               repeat={Infinity}
-              className="text-white dark:text-white text-5xl md:text-5xl lg:text-6xl font-semibold"
+              className="text-gray-700 dark:text-white text-5xl md:text-5xl lg:text-6xl font-semibold"
             />
           </h1>
           <h1 className="text-[#009FB2] text-7xl md:text-6xl lg:text-7xl font-extrabold mb-2">

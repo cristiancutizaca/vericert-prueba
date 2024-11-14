@@ -11,7 +11,7 @@ const CarouselCursosDestacados = dynamic(
   () => import("@/components/home/SwiperCursosDestacados")
 );
 const TestimoniosFb = dynamic(() => import("@/components/home/TestimoniosFb"));
-const QuienesSomos = dynamic(() => import("@/components/home/QuienesSomos"));
+//const QuienesSomos = dynamic(() => import("@/components/home/QuienesSomos"));
 const NuestrosDiplomados = dynamic(
   () => import("@/components/home/NuestrosDiplomados")
 );
@@ -21,52 +21,40 @@ const LogosCarrousel = dynamic(
   () => import("@/components/home/logosCarrousel")
 );
 
-
 export default function Main() {
-
-
   return (
-    <main className="relative z-0 bg-fondDark">
+    <main className="relative z-0 bg-gradient-to-r  from-[#e0f9f6] to-[#e0f9f6] ">
       {/* Botón para cambiar de tema */}
-      <div className="bg-fondDark ">
+      <div className=" bg-gradient-to-r  from-cyan-450 to-blue-500  dark:bg-fondDark  ">
         <PrincipalHome />
       </div>
-      <div className="bg-fondDark">
+      {/*  <div className="bg-blue-500  dark:bg-fondDark ">
         <QuienesSomos />
-      </div>
-      <div className="bg-fondDark">
+      </div> */}
+      <div className=" dark:bg-fondDark">
         <LogosCarrousel />
       </div>
-      <div className="bg-fondDark ">
+      <div className=" dark:bg-fondDark">
         <NuestrosDiplomados />
       </div>
-      <div className="bg-fondDark"> </div>
-      <div className="absolute w-96 h-96 blur-2xl -z-10 bg-gradient-radial dark:from-teal-950 from-blue-200 to-transparent right-52 top-[25%] hidden md:block"></div>
-      <div className="absolute w-96 h-96 blur-2xl -z-10 bg-gradient-radial dark:from-cyan-950  from-blue-200 to-transparent right-[5%] top-[1%] block md:hidden"></div>
-      <div className="absolute w-96 h-96 blur-2xl -z-10 bg-gradient-radial dark:from-cyan-950 from-violet-200 to-transparent left-52 top-[25%] hidden md:block"></div>
-
-      <div className=" rounded-lg  mx-auto max-w-screen-xl ">
+      <div className=" dark:bg-fondDark">
         <SwiperCarrouselDiplomados />
       </div>
-      <div className="bg-primaryfondDark"> </div>
-      <div className=" absolute w-[500px] h-96 blur-2xl -z-10 bg-gradient-radial dark:from-cyan-950 from-blue-100 to-transparent top-[40%] right-24 transform -translate-x-1/2 hidden md:block"></div>
-      <div className="absolute w-[500px] h-96 blur-2xl -z-10 bg-gradient-radial dark:from-cyan-950 from-blue-100 to-transparent top-[60%] left-1/2 transform -translate-x-1/2 hidden md:block"></div>
-      <div className="absolute w-[500px] h-96 blur-2xl -z-10 bg-gradient-radial dark:from-cyan-950 from-violet-100 to-transparent top-[60%] left-[40%] transform -translate-x-1/2 hidden md:block"></div>
-      <div className="px-4 mx-auto rounded-lg p-4 md:p-2 ">
+      <div className=" dark:bg-fondDark ">
         <PorqueNosotros />
       </div>
-      <div className=" mx-auto max-w-screen-xl ">
+      <div className="  dark:bg-fondDark ">
         <CarouselCursosDestacados />
       </div>
-      <div className=" mx-auto max-w-screen-xl mt-6 ">
+      <div className=" dark:bg-fondDark ">
         <TestimoniosFb />
       </div>
 
-      <div className=" ">
+      <div className=" dark:bg-fondDark ">
         <ContactForm />
       </div>
 
-      <div className="">
+      <div className=" dark:bg-fondDark">
         <ScrollToBotButton />
       </div>
     </main>
